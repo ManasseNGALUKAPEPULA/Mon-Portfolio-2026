@@ -453,3 +453,77 @@ footer a:hover {
 main section h2 {
     margin-top: 3rem;
 }
+
+/* --- Styles spécifiques pour la page Passions --- */
+
+.passions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: var(--gris-fonce);
+    font-size: 1.1rem;
+    padding: 0 1rem;
+}
+
+/* On utilise la classe .grid déjà existante dans ton CSS */
+
+/* Touche professionnelle : effet de zoom sur l'image au survol de la carte */
+.card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+/* Adaptation spécifique des tags pour les passions */
+.passions-container .tags span {
+    background-color: white;
+    color: var(--violet-fonce);
+    border-style: dashed; /* Différencie visuellement des projets */
+}
+
+/* Réactivité pour les petits écrans */
+@media (max-width: 600px) {
+    .section-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* --- Styles spécifiques pour la page Divertissement --- */
+
+.divertissement-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+/* Changement de couleur au survol pour utiliser l'orange-vif (plus chaleureux pour le loisir) */
+.divertissement-container .card:hover {
+    box-shadow: 0 10px 25px rgba(255, 167, 38, 0.2);
+    border-bottom: 3px solid var(--orange-vif);
+}
+
+/* Style des tags en mode "Détente" */
+.divertissement-container .tags span {
+    background-color: var(--gris-clair);
+    color: var(--gris-tres-fonce);
+    border: none;
+    font-style: italic;
+    border-radius: 20px; /* Plus arrondi pour un look moins rigide */
+}
+
+/* Animation sur les images */
+.divertissement-container .card img {
+    filter: saturate(0.8);
+    transition: all 0.4s ease;
+}
+
+.divertissement-container .card:hover img {
+    filter: saturate(1.2);
+    transform: scale(1.03);
+}
